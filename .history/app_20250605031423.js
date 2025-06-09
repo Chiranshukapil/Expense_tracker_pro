@@ -11,6 +11,8 @@ const app = express();
 app.use(cors());
 
 
+console.log("Mongo URI:", process.env.mongo_connection);
+
 mongoose.connect(process.env.mongo_connection,{}).then(()=>{
     console.log("Mongo connection successfull!");
 }).catch(()=>{

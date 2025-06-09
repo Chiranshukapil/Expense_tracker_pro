@@ -10,7 +10,6 @@ import 'dotenv/config'
 const app = express();
 app.use(cors());
 
-
 mongoose.connect(process.env.mongo_connection,{}).then(()=>{
     console.log("Mongo connection successfull!");
 }).catch(()=>{
